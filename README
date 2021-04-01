@@ -18,7 +18,7 @@ arguments:
 3. a per bp coverage file generated from an ATACseq data set, generated with bedtools genomecov, in bedGraph format
 4. outfilePrefix - prefix for the output files. Specifically a <prefix>_aggregate.txt with values indicated. This file will present an aggregated signal for each region in the input which is the per bp coverage averaged over the regions
 
-Modified from Debbie's code in aggregateSignalMotifNet to take a simpler .bed format input file for the regions of interest
+Modified from aggregateSignalMotifNet to take a simpler .bed format input file for the regions of interest
 
 Note this is motified to skip mitochodrial sequences, for ATACseq data, because mitochondrial data can be troublesome. 
 
