@@ -18,13 +18,13 @@ arguments:
 3. a per bp coverage file generated from an ATACseq data set, generated with bedtools genomecov, in bedGraph format
 4. outfilePrefix - prefix for the output files. Specifically a <prefix>_aggregate.txt with values indicated. This file will present an aggregated signal for each region in the input which is the per bp coverage averaged over the regions
 
-Modified from aggregateSignalMotifNet to take a simpler .bed format input file for the regions of interest
+#Modified from aggregateSignalMotifNet to take a simpler .bed format input file for the regions of interest
 
-Note this is motified to skip mitochodrial sequences, for ATACseq data, because mitochondrial data can be troublesome. 
+Note this program will skip mitochodrial sequences because mitochondrial data can be troublesome, notably in ATACseq experiments. 
 
-When -n is used the ratio of per bp coverage relative to the global mean will be taken and averaged per bp for the signal values.
+When -n is used the ratio of per bp coverage in a region relative to the global (genome-wide) mean will be taken and averaged per bp for the signal values.
 
-I have used -n 1 to implement that I am doing only depth normalization, which is implemented in the  Framework::normalize(double scalar) function.
+Use -n 1 to implement only depth normalization, which is implemented in the  Framework::normalize(double scalar) function.
 
 Have not fully troubleshooted the -p option for this exact code. 
 
