@@ -1,3 +1,5 @@
+Compiled with: g++ Framework.C -g -o aggregateSignal
+
 Usage: aggregateSignal bedfile chromosomesizes signal outfilePrefix [-n/--normalize <scalar>]
 If -p/--printProfile option, will print per-base-pair signal for motif instances. Use with caution as it will create huge files.
 	This requires a parameter for defining a uniformly sized window around each motif center: center +/- window.
